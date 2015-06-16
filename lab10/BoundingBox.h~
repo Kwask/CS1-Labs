@@ -1,0 +1,29 @@
+#ifndef BOUNDINGBOX_H
+#define BOUNDINGBOX_H
+
+#include <string>
+
+using namespace std;
+
+class BoundingBox
+{
+
+private:
+  double minLong;
+  double minLat;
+  double maxLong;
+  double maxLat;
+  double difLong;
+  double difLat;
+  double width;
+  double height;
+
+public:
+  BoundingBox( double minLong, double minLat, double maxLong, double maxLat );
+
+  double translateLatitude( double latitude );
+  double translateLongitude( double longitude );
+
+};
+
+#endif
